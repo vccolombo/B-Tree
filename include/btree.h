@@ -100,10 +100,10 @@ node_position _btree_remove_node(node_t *node, int key, int order);
 /*
     Retorna o node_position da maior key em node
  */
-inline node_position _node_find_max(node_t *node);
+node_position _node_find_max(node_t *node);
 /*
     Retorna o node_position da menor key em node
  */
-inline node_position _node_find_min(node_t *node);
+node_position _node_find_min(node_t *node);
 
 #endif

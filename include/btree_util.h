@@ -73,7 +73,7 @@ pair_t* _pair_new(int key, void *value);
 /*
     Aloca e retorna um novo pair com os valores do pair passado como parâmetro
  */
-inline pair_t* _pair_copy(pair_t *p);
+pair_t* _pair_copy(pair_t *p);
 
 /*
     node:   nó em que a key será pesquisada
@@ -81,7 +81,7 @@ inline pair_t* _pair_copy(pair_t *p);
     pos:    retorno da posição em que a chave foi encontrada. Default: -1
     @return: se a chave key pertence ou não ao nó node
  */
-inline bool _node_find_key(node_t *node, int key, int* pos);
+bool _node_find_key(node_t *node, int key, int* pos);
 
 /*
     As funções a seguir correspondem à execução de um FOR.
@@ -93,20 +93,20 @@ inline bool _node_find_key(node_t *node, int key, int* pos);
     A operação executada no FOR será:
         to.keys[padding_to + CONT] <- from.keys[padding_from + CONT]
  */
-inline void _node_deslocate_keys_up(node_t *to, node_t *from, int beg, int end, int padding_to, int padding_from);
-inline void _node_deslocate_keys_down(node_t *to, node_t *from, int beg, int end, int padding_to, int padding_from);
+void _node_deslocate_keys_up(node_t *to, node_t *from, int beg, int end, int padding_to, int padding_from);
+void _node_deslocate_keys_down(node_t *to, node_t *from, int beg, int end, int padding_to, int padding_from);
 /*
     A operação executada no FOR será:
         to.children[padding_to + CONT] <- from.children[padding_from + CONT]
  */
-inline void _node_deslocate_children_up(node_t *to, node_t *from, int beg, int end, int padding_to, int padding_from);
-inline void _node_deslocate_children_down(node_t *to, node_t *from, int beg, int end, int padding_to, int padding_from);
+void _node_deslocate_children_up(node_t *to, node_t *from, int beg, int end, int padding_to, int padding_from);
+void _node_deslocate_children_down(node_t *to, node_t *from, int beg, int end, int padding_to, int padding_from);
 
 /*
     Deleta um node alocado pela função _node_new(),
     isto é, essa função não tem como responsabilidade deletar
     a chaves e os nós-filhos associados à node.
  */
-inline void _node_delete(node_t *node);
+void _node_delete(node_t *node);
 
 #endif
