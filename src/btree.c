@@ -2,7 +2,7 @@
     B-Tree - Antonio Carlos Falcão Petri e Thiago Yonamine
     DC - UFSCar - São Carlos - 2015
  */
-#include "btree.h"
+#include "../include/btree.h"
 
 BTree* btree_new(int order) {
 	BTree* bt = malloc(sizeof(BTree));
